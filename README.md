@@ -51,7 +51,7 @@ and it will work. Only that now you are creating a lot of class methods, which a
   end
 ```
 
-Ok, now it's real OO! It will much easier to write your tests, too. But you'll need to handle methods delegation to the controller, things like calling `params`, `render`, and so on. 
+Ok, now this is real OO! It will much easier to write your tests, too. But you'll need to handle methods delegation to the controller, things like calling `params`, `render`, and so on. 
 
 This is where filter_object comes in.
 
