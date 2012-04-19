@@ -133,5 +133,18 @@ describe FilterObject::Filter do
         run_filter
       end
     end
+
+    context "calling undefined methods" do
+      before do
+        def filter_object.filter(controller)
+          super 
+          whatever
+        end
+      end
+
+      it "does not delegate calls to unknown methods" do
+        expect { run_filter }.to raise_error(NameError)
+      end
+    end
   end
 end
