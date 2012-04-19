@@ -1,10 +1,14 @@
 ## TL;DR
 ``` ruby
+# in your Gemfile
+gem "filter_object"
+
+# in your controller 
 class YourController < ApplicationController
   before_filter YourFilterClass.new
 end
 
-# Inside app/filters/your_filter_class.rb
+# inside app/filters/your_filter_class.rb
 class YourFilterClass
   include FilterObject::Filter
 
